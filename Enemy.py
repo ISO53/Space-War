@@ -9,7 +9,7 @@ ALL_SPACE_SHIPS = [C.RED_SPACE_SHIPS, C.BLUE_SPACE_SHIPS, C.YELLOW_SPACE_SHIPS]
 
 class Enemy(Ship):
 
-    def __init__(self, level, x, y, health=1):
+    def __init__(self, level, x, y, health=100):
         super().__init__(level, x, y, health)
         self.ship_image = ALL_SPACE_SHIPS[randint(0, 2)][level - 1]
         self.fire = Fire(level, level * 5, 0, 0)
